@@ -1,0 +1,55 @@
+\documentclass{article}
+
+% \usepackage[spanish]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Ecuaciones en diferencias}
+
+\author{Rafael Villarroel}
+
+\date{18 de septiembre de 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Ecuaciones de primer grado}
+
+\subsection{Ecuaciones lineales}
+
+Una ecuación lineal en diferencias de primer grado tiene la forma $x_{n+1}=ax_n$ donde $a$ es una constante. 
+
+La fórmula para resolver ecuaciones lineales es:
+\begin{equation}
+  \label{lineal}
+  x_n=a^nx_0
+\end{equation}
+
+Por ejemplo, si inciamos una inversión con 1000 pesos con un interés mensual del 1\%, obtenemos lo siguiente:
+
+\begin{center}
+  \includegraphics[width=8cm]{inversion.png}
+\end{center}
+
+\subsection{Ecuaciones afines}
+
+Una ecuación afín en diferencias de primer grado tiene la forma $x_{n+1}=ax_n+b$ donde $a$ es una constante. 
+
+\begin{equation}
+  \label{afin}
+  x_n=a^n(x_0-\alpha)+\alpha
+\end{equation}
+
+donde $\alpha=\frac{b}{1-a}$. 
+
+Para deducir esta fórmula usamos que $$\sum_{i=0}^{n-1}a^i=\frac{a^n-1}{a-1}$$.
+
+\section{Ecuaciones de segundo grado}
+
+El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
+
+Una ecuación lineal en diferencias de primer grado tiene la forma $x_{n+1}=ax_n$ donde $a$ es una constante. 
+
+\end{document}
