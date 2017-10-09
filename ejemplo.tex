@@ -58,7 +58,7 @@ Para deducir esta fórmula usamos que $$\sum_{i=0}^{n-1}a^i=\frac{a^n-1}{a-1}$$.
 
 \subsection{Ejemplito}
 
-Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
+Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
 \section{Ecuaciones de segundo orden}
 
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
@@ -67,4 +67,41 @@ Para resolver una ecuación en diferencias de segundo orden se usa la ecuación 
 
 Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
 Esta ecuaci\'on no tiene raices reales $$x^2+1=0$$
+
+
+\subsection{Ejemplo 2}
+
+Se plantea la siguiente ecuacción en diferencias:
+
+$a_{n+2}=2a_{n+1}-a_{n}$ con condiciones iniciales : $a_{0}=4 ; a_{1}=7$
+
+Solución:
+
+Primero igualamos la ecuación en diferencias a cero:
+
+$a_{n+2}-2a_{n+1}+a_{n}=0$ Esto último nos genera una ecuacción resolvente que se factoriza y resuelve facilmente:
+
+$r^2-2r+1=0$
+
+${(r-1)^2=0}$
+
+${r=1}$
+La solución general a esta eccuación en diferencias seria:
+
+$a_{n}=\lambda_{1}(1)^n+n\lambda_{2}(1)^n$
+
+Sin embargo, el problema nos da condiciones iniciales específicas.Entonces procedemos a plantear un sistema de ecuaciones para poder satisfacer las condiciones iniciales.
+
+$a_{0}=4=\lambda_{1}(1)^0+0\lambda_{2}(1)^0$
+
+$a_{1}=7=\lambda_{1}(1)^1+1\lambda_{2}(1)^1$
+
+Al resolver lo anterior obtenemos los siguientes valores:
+
+$\lambda_{1}=4 y \lambda_{2}=3$
+
+Con lo que la solución final sera:
+
+$a_{n}=4(1)^n+3n(1)^n$
+
 \end{document}
