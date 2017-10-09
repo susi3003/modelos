@@ -15,6 +15,8 @@
 
 \maketitle
 
+Si en una ecuación en diferencias, la función f no depende de n, la ecuación en diferencias es autónoma.
+
 \section{Ecuaciones de primer orden}
 
 \subsection{Ecuaciones lineales}
@@ -33,7 +35,13 @@ Por ejemplo, si inciamos una inversión con 1000 pesos con un interés mensual d
   \includegraphics[width=8cm]{inversion.png}
 \end{center}
 
+
 $x_{n+1}=1.01x_t$
+
+Estas ecuaciones hacen que una ecuación que inicialmente era de esta manera $x_{n+1}=x_n+2(x_n)$ puede escribirse de manera que la ecuación solo dependa de $x_n$ y queda de la siguiente forma:
+
+$x_n=3^n(4)$0     
+
 
 \subsection{Ecuaciones afines}
 
@@ -48,6 +56,9 @@ donde $\alpha=\frac{b}{1-a}$.
 
 Para deducir esta fórmula usamos que $$\sum_{i=0}^{n-1}a^i=\frac{a^n-1}{a-1}$$.
 
+\subsection{Ejemplito}
+
+Nuestro compañerito Pepe muere en raras circunstancias, luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
 \section{Ecuaciones de segundo orden}
 
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
