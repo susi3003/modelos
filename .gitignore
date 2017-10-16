@@ -1,9 +1,3 @@
 *.aux
-<<<<<<< HEAD
 *.pdf
 *.log
-=======
-*.log
-*.pdf
-
->>>>>>> master
