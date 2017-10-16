@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 
 \title{Ecuaciones en diferencias}
 
@@ -16,7 +17,7 @@
 
 \maketitle
 
-Si en una ecuación en diferencias, la función f no depende de n, la ecuación en diferencias es autónoma.
+Si en una ecuación en diferencias, la función f no depende de n, la ecuación en diferencias es autónoma. $\mathbb{R}$.
 
 \section{Ecuaciones de primer orden}
 
@@ -43,23 +44,14 @@ Estas ecuaciones hacen que una ecuación que inicialmente era de esta manera $x_
 
 $x_n=3^n(4)$0     
 
-
-\subsection{Ecuaciones afines}
-
-Una ecuación afín en diferencias de primer orden tiene la forma $x_{n+1}=ax_n+b$ donde $a$ es una constante. 
-
-\begin{equation}
-  \label{afin}
-  x_n=a^n(x_0-\alpha)+\alpha
-\end{equation}
-
-donde $\alpha=\frac{b}{1-a}$. 
-
-Para deducir esta fórmula usamos que $$\sum_{i=0}^{n-1}a^i=\frac{a^n-1}{a-1}$$.
-
 \subsection{Ejemplito}
 
 Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
+
+\subsection{Un ejemplito más}
+
+(esto continuará, no lo pude hacer completo)
+
 \section{Ecuaciones de segundo orden}
 
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
@@ -67,7 +59,30 @@ El método para resolver estas ecuaciones está inspirado en la fórmula \ref{li
 Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
 
 Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
+
 Esta ecuación no tiene raices reales $$x^2+1=0$$
+
+\subsection{Números  complejos}
+
+Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ , con $i^2=(-1)$, a parte real, b parte imaginaria.
+
+El módulo de un número complejo: $|a+bi|=\surd(a^2+b^2)$.
+
+
+El argumento de un número complejo es el ángulo comprendido en(continuará)
+
+
+\subsection{Ejemplo}
+
+Para cada $n$, considera el determinante $n\times n$ dado por:
+\begin{equation}
+  \label{eq:1}
+  D_n=\det
+  \begin{pmatrix}
+    b & b\\
+    b & b 
+  \end{pmatrix}
+\end{equation}
 
 \subsection{RAICES COMPLEJAS}
 
@@ -84,4 +99,5 @@ Ahora buscaremos su módulo:
 $|r|=\sqrt{2^2}$
 
 Este ejemplo continuará...
+
 \end{document}
