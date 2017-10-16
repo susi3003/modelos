@@ -85,6 +85,21 @@ Para resolver una ecuación en diferencias de segundo orden la cual tiene dos ra
 \end{equation}
 
 donde $x_1=x_2$ son soluciones de la ecuación de segundo orden y $\lambda_1$ y $\lambda_2$ son escalares reales.
+=======
+\subsection{ejemplo 1}
+En la siguiente ecuación en diferencias
+\begin{equation}
+  \label{eq:1}
+  x_{n+2}=4x_{n+1}-4x_{n}
+\end{equation}
+ veremos que al resolverla tenemos una ecuación con una sola raiz.
+En $$r^2-4r+4=0$$ (2) las raices son soluciones de (1), usado la formula chicharronera vemos que solo con $r=2$.
+
+La ecuaci\'on resolvente es:
+$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
+ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
+\end{document}
+>>>>>>> master
 
 \subsection{Números  complejos}
 
@@ -111,3 +126,4 @@ Para cada $n$, considera el determinante $n\times n$ dado por:
 
 
 \end{document}
+
