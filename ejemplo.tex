@@ -61,6 +61,34 @@ El método para resolver estas ecuaciones está inspirado en la fórmula \ref{li
 
 Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
 
+<<<<<<< HEAD
+\subsection{Ejemplo no.1}
+
+La ecuación de segundo grado mas conocida es la $Sucesión de Fibonacci$ la cual se ve de la forma:
+
+$$a_{k+2}=a_{kn+1}+a_{kn}$$
+ 
+En donde $a_{0}=1$ y $a_{1}=1$
+
+Claramente es facil calcular los primeros terminos, pero, ¿Como calcular la cuando el termino es demasiado grande?
+La respuesta es sencilla, resolvemos una ecuacion resovente que viene de la solucion, la cual se ve de la siguiente manera:
+
+$$x^2-x-1$$
+
+Obtenemos despues ambas raices, las cuales son:
+$x_{1}= {1+(5)^{1/2}}/2$ y $x_{2}={1-(5)^{1/2}/2$
+
+Obteniendo finalmente:
+$alpha_{1}(1+(5)^{1/2})^n + alpha_{2}(1-(5)^{1/2}/2)^n$
+
+Ahora resolvemos un sistema de ecuaciones tal que:
+$alpha_{1} + alpha_{2}= 1$ y $alpha_{1}(1+(5)^{1/2}) + alpha_{2}({1-(5)^{1/2}/2)=1$
+
+Para obtener finalmente:
+$F_{n}= (5+(5)^{1/2})/10)((1+(5)^{1/2})^n)/2) + (5-(5)^{1/2})/10)((1-(5)^{1/2})^n)/2)$
+
+\subsection{Ejemplo no.2}
+=======
 Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
 
 Esta ecuación no tiene raices reales $$x^2+1=0$$
@@ -68,7 +96,10 @@ Esta ecuación no tiene raices reales $$x^2+1=0$$
 \subsection{Ejemplo}
 
 ¿De cuantas maneras se puede cubrir un tablero de $2xn$ usando fichas de $1x2,2x1$?
+>>>>>>> devel
 
+<<<<<<< HEAD
+=======
 
 
 \subsection{Dos raices iguales}
@@ -82,15 +113,22 @@ Para resolver una ecuación en diferencias de segundo orden la cual tiene dos ra
 donde $x_1=x_2$ son soluciones de la ecuación de segundo orden y $\lambda_1$ y $\lambda_2$ son escalares reales.
 =======
 \subsection{ejemplo 1}
+>>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
 En la siguiente ecuación en diferencias
 \begin{equation}
   \label{eq:1}
   x_{n+2}=4x_{n+1}-4x_{n}
 \end{equation}
- veremos que al resolverla tenemos una ecuación con una sola raiz.
+
+veremos que al resolverla tenemos una ecuación con una sola raiz.
 En $$r^2-4r+4=0$$ (2) las raices son soluciones de (1), usado la formula chicharronera vemos que solo con $r=2$.
 
 La ecuaci\'on resolvente es:
+<<<<<<< HEAD
+$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
+ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
+
+=======
 
 $$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
 ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
@@ -103,6 +141,7 @@ ya solo despues se checan los valores iniciales para que nos de los valores de $
 
 $$x_n=m_1(2^n)+m_2(n)(2^n)$$
 ya solo despues se checan los valores iniciales para que nos de los valores de $m_1$ y $m_2$.
+>>>>>>> devel
 
 \subsection{Ejemplo 2}
 
@@ -142,6 +181,9 @@ $a_{n}=4(1)^n+3n(1)^n$
 >>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
 
 \subsection{Números  complejos}
+
+Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
+Esta ecuaci\'on no tiene raices reales $$x^2+1=0$$
 
 Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ , con $i^2=(-1)$, a parte real, b parte imaginaria.
 
@@ -199,4 +241,3 @@ $|r|=\sqrt{2^2+2^2}$
 Continuará...
 
 \end{document}
-
