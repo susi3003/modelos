@@ -18,13 +18,20 @@
 
 \maketitle
 
-Si en una ecuación en diferencias, la función f no depende de n, la ecuación en diferencias es autónoma. $\mathbb{R}$.
+\section{Ecuaciones en diferencias}
+\label{sec:ecuaciones}
+
+% Carolina: Texto introductorio
+
+Si en una ecuación en diferencias, la función $f$ no depende de $n$,
+la ecuación en diferencias es autónoma.
 
 \section{Ecuaciones de primer orden}
 
 \subsection{Ecuaciones lineales}
 
-Una ecuación lineal en diferencias de primer orden tiene la forma $x_{n+1}=ax_n$ donde $a$ es una constante. 
+Una ecuación lineal en diferencias de primer orden tiene la forma
+$x_{n+1}=ax_n$ donde $a$ es una constante.
 
 La fórmula para resolver ecuaciones lineales es:
 \begin{equation}
@@ -32,28 +39,31 @@ La fórmula para resolver ecuaciones lineales es:
   x_n=a^nx_0
 \end{equation}
 
-Por ejemplo, si inciamos una inversión con 1000 pesos con un interés mensual del 1\%, obtenemos lo siguiente:
+Por ejemplo, si iniciamos una inversión con 1000 pesos con un interés
+mensual del 1\%, obtenemos lo siguiente:
 
 \begin{center}
   \includegraphics[width=8cm]{inversion.png}
 \end{center}
 
+Estas ecuaciones hacen que una ecuación que inicialmente era de esta
+manera: $x_{n+1}=x_n+2x_n$ puede escribirse de manera que la ecuación
+solo dependa de $x_n$ y queda $x_{n+1}=3x_n$, cuya solución con
+condición inicial $x_0=4$ es la siguiente:
 
-$x_{n+1}=1.01x_t$
-
-Estas ecuaciones hacen que una ecuación que inicialmente era de esta manera $x_{n+1}=x_n+2(x_n)$ puede escribirse de manera que la ecuación solo dependa de $x_n$ y queda de la siguiente forma:
-
-$x_n=3^n(4)$0     
+$$x_n=3^n(4)$$.  
 
 \subsection{Ejemplito}
 
-Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
-
+Nuestro compañerito Pepe muere en raras circunstancias (después de
+tener su examen de Álgebra II), luego descubren lo radiante de su
+ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si
+inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se
+vea un poco más feo (como quien dice, dentro de 200 años)?
 
 \subsection{Un ejemplito más}
 
-(esto continuará, no lo pude hacer completo)
-
+% Antonio
 
 \section{Ecuaciones de segundo orden}
 
@@ -61,31 +71,48 @@ El método para resolver estas ecuaciones está inspirado en la fórmula \ref{li
 
 Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
 
-<<<<<<< HEAD
-\subsection{Ejemplo no.1}
+% Mauricio
 
-La ecuación de segundo grado mas conocida es la $Sucesión de Fibonacci$ la cual se ve de la forma:
+\subsection{Dos soluciones distintas}
+\label{sec:distintas}
 
-$$a_{k+2}=a_{kn+1}+a_{kn}$$
+\subsubsection{Ejemplo}
+
+La ecuación de segundo grado más conocida es la \textit{sucesión de
+  Fibonacci}, la cual se ve de la forma:
+$$a_{k+2}=a_{kn+1}+a_{kn}$$.
  
-En donde $a_{0}=1$ y $a_{1}=1$
+En donde usualmente se toman como condiciones iniciales a: $a_{0}=1$ y $a_{1}=1$
 
-Claramente es facil calcular los primeros terminos, pero, ¿Como calcular la cuando el termino es demasiado grande?
-La respuesta es sencilla, resolvemos una ecuacion resovente que viene de la solucion, la cual se ve de la siguiente manera:
+Es inmediato calcular los primeros términos, pero ¿cómo calcularlos
+cuando los términos son demasiado grandes?  Para obtenerlos,
+consideramos la ecuacion resolvente que viene de la ecuación original,
+la cual se ve de la siguiente manera:
+$$x^2-x-1$$.
 
-$$x^2-x-1$$
-
-Obtenemos despues ambas raices, las cuales son:
+Obtenemos después ambas raíces, las cuales son:
 $x_{1}= {1+(5)^{1/2}}/2$ y $x_{2}={1-(5)^{1/2}/2$
 
 Obteniendo finalmente:
-$alpha_{1}(1+(5)^{1/2})^n + alpha_{2}(1-(5)^{1/2}/2)^n$
+$\alpha_{1}(1+(5)^{1/2})^n + \alpha_{2}(1-(5)^{1/2}/2)^n$
 
 Ahora resolvemos un sistema de ecuaciones tal que:
-$alpha_{1} + alpha_{2}= 1$ y $alpha_{1}(1+(5)^{1/2}) + alpha_{2}({1-(5)^{1/2}/2)=1$
+$\alpha_{1} + \alpha_{2}= 1$ y $\alpha_{1}(1+(5)^{1/2}) + \alpha_{2}({1-(5)^{1/2}/2)=1$
 
 Para obtener finalmente:
 $F_{n}= (5+(5)^{1/2})/10)((1+(5)^{1/2})^n)/2) + (5-(5)^{1/2})/10)((1-(5)^{1/2})^n)/2)$
+
+
+\subsection{Una única solución}
+\label{sec:unica}
+
+\subsection{Soluciones complejas}
+\label{sec:complejas}
+
+
+
+
+<<<<<<< HEAD
 
 \subsection{Ejemplo no.2}
 =======
