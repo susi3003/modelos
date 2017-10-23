@@ -1,3 +1,11 @@
 *.aux
+<<<<<<< HEAD
 *.log
 *.pdf
+=======
+*.pdf
+*.log
+
+
+
+>>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
