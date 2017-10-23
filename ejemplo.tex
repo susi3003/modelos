@@ -1,3 +1,4 @@
+
 \documentclass{article}
 
 % \usepackage[spanish]{babel}
@@ -12,7 +13,7 @@
 \author{Alumnos de 3er semestre grupo 2}
 
 \date{18 de septiembre de 2017}
-
+ 
 \begin{document}
 
 \maketitle
@@ -48,9 +49,11 @@ $x_n=3^n(4)$0
 
 Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
 
+
 \subsection{Un ejemplito más}
 
 (esto continuará, no lo pude hacer completo)
+
 
 \section{Ecuaciones de segundo orden}
 
@@ -95,6 +98,11 @@ Esta ecuación no tiene raices reales $$x^2+1=0$$
 ¿De cuantas maneras se puede cubrir un tablero de $2xn$ usando fichas de $1x2,2x1$?
 >>>>>>> devel
 
+<<<<<<< HEAD
+=======
+
+\subsection{ejemplo 1}
+>>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
 En la siguiente ecuación en diferencias
 \begin{equation}
   \label{eq:1}
@@ -111,12 +119,50 @@ ya solo despues se checan los valores iniciales para que nos de los valores de $
 
 =======
 
+$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
+ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
 $$x_n=m_1(2^n)+m_2(n)(2^n)$$
 ya solo despues se checan los valores iniciales para que nos de los valores de $$m_1$$ y $$m_2$$.
 
 $$x_n=m_1(2^n)+m_2(n)(2^n)$$
 ya solo despues se checan los valores iniciales para que nos de los valores de $m_1$ y $m_2$.
 >>>>>>> devel
+
+\subsection{Ejemplo 2}
+
+Se plantea la siguiente ecuacción en diferencias:
+
+$a_{n+2}=2a_{n+1}-a_{n}$ con condiciones iniciales : $a_{0}=4 ; a_{1}=7$
+
+Solución:
+
+Primero igualamos la ecuación en diferencias a cero:
+
+$a_{n+2}-2a_{n+1}+a_{n}=0$ Esto último nos genera una ecuacción resolvente que se factoriza y resuelve facilmente:
+
+$r^2-2r+1=0$
+
+${(r-1)^2=0}$
+
+${r=1}$
+La solución general a esta eccuación en diferencias seria:
+
+$a_{n}=\lambda_{1}(1)^n+n\lambda_{2}(1)^n$
+
+Sin embargo, el problema nos da condiciones iniciales específicas.Entonces procedemos a plantear un sistema de ecuaciones para poder satisfacer las condiciones iniciales.
+
+$a_{0}=4=\lambda_{1}(1)^0+0\lambda_{2}(1)^0$
+
+$a_{1}=7=\lambda_{1}(1)^1+1\lambda_{2}(1)^1$
+
+Al resolver lo anterior obtenemos los siguientes valores:
+
+$\lambda_{1}=4 y \lambda_{2}=3$
+
+Con lo que la solución final sera:
+
+$a_{n}=4(1)^n+3n(1)^n$
+
 
 \subsection{Números  complejos}
 
@@ -141,7 +187,7 @@ Para cada $n$, considera el determinante $n\times n$ dado por:
     b & b\\
     b & b 
   \end{pmatrix}
-\end{equation}
+\end{equation} 
 
 \subsection{RAICES COMPLEJAS}
 
@@ -158,5 +204,24 @@ Ahora buscaremos su módulo:
 $|r|=\sqrt{2^2}$
 
 Este ejemplo continuará...
+
+\subsection{Ejemplo: Raíces complejas} 
+ 
+ALgunas veces las ecuaciones no tiene solución en los reales pero si en los complejos, y eso no tiene por qué ser un problema. La siguiente ecuación tiene soluciones complejas:
+ 
+$x_{n+2}=4x_{n+1}-8x_n$ con condiciones iniciales $x_0=1$ y $x_1=0$
+
+Para encontrar sus raíces se lleva a cabo el prodecimiento habitual. En este caso sus raíces son:
+
+$r=2\pm2i$
+
+
+El siguiente paso es encontrar su módulo: 
+
+
+$|r|=\sqrt{2^2+2^2}$
+
+
+Continuará...
 
 \end{document}
