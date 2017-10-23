@@ -50,8 +50,7 @@ Estas ecuaciones hacen que una ecuación que inicialmente era de esta
 manera: $x_{n+1}=x_n+2x_n$ puede escribirse de manera que la ecuación
 solo dependa de $x_n$ y queda $x_{n+1}=3x_n$, cuya solución con
 condición inicial $x_0=4$ es la siguiente:
-
-$$x_n=3^n(4)$$.  
+$$x_n=3^n(4).$$
 
 \subsection{Ejemplito}
 
@@ -67,6 +66,8 @@ vea un poco más feo (como quien dice, dentro de 200 años)?
 
 \section{Ecuaciones de segundo orden}
 
+Una ecuación en diferencias de segundo orden tiene la forma $a_{k+2}=f(a_k,a_{k+1})$.
+
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
 
 Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
@@ -80,191 +81,138 @@ Para resolver una ecuación en diferencias de segundo orden se usa la ecuación 
 
 La ecuación de segundo grado más conocida es la \textit{sucesión de
   Fibonacci}, la cual se ve de la forma:
-$$a_{k+2}=a_{kn+1}+a_{kn}$$.
- 
-En donde usualmente se toman como condiciones iniciales a: $a_{0}=1$ y $a_{1}=1$
+$$a_{k+2}=a_{k+1}+a_{k},$$
+en donde usualmente se toman como condiciones iniciales a: $a_{0}=1$ y $a_{1}=1$
 
 Es inmediato calcular los primeros términos, pero ¿cómo calcularlos
 cuando los términos son demasiado grandes?  Para obtenerlos,
-consideramos la ecuacion resolvente que viene de la ecuación original,
+consideramos la ecuación resolvente que viene de la ecuación original,
 la cual se ve de la siguiente manera:
-$$x^2-x-1$$.
+$$r^2-r-1=0$$
 
 Obtenemos después ambas raíces, las cuales son:
-$x_{1}= {1+(5)^{1/2}}/2$ y $x_{2}={1-(5)^{1/2}/2$
-
-Obteniendo finalmente:
-$\alpha_{1}(1+(5)^{1/2})^n + \alpha_{2}(1-(5)^{1/2}/2)^n$
+$r_{1}= \frac{1+\sqrt{5}}{2}$ y $r_{2}=\frac{1-\sqrt{5}}{2}$. La
+solución general es entonces:
+$a_{k}=\alpha_{1}(\frac{1+\sqrt{5}}{2})^{k} +
+\alpha_{2}(\frac{1-\sqrt{5}}{2})^k$
 
 Ahora resolvemos un sistema de ecuaciones tal que:
-$\alpha_{1} + \alpha_{2}= 1$ y $\alpha_{1}(1+(5)^{1/2}) + \alpha_{2}({1-(5)^{1/2}/2)=1$
+$\alpha_{1} + \alpha_{2}= 1$ y
+$\alpha_{1}(\frac{1+\sqrt{5}}{2}) + \alpha_{2}(\frac{1+\sqrt{5}}{2})=1$
 
 Para obtener finalmente:
-$F_{n}= (5+(5)^{1/2})/10)((1+(5)^{1/2})^n)/2) + (5-(5)^{1/2})/10)((1-(5)^{1/2})^n)/2)$
+$F_{n}= \frac{5+\sqrt{5}}{10}\frac{(1+\sqrt{5})^n}{2} +
+\frac{5-\sqrt{5}}{10}\frac{(1-\sqrt{5})^n}{2}$
 
+\subsubsection{Ejemplo}
+\label{sec:fichas}
+
+¿De cuantas maneras se puede cubrir un tablero de $2\times n$ usando
+fichas de $1\times 2$, $2\times 1$?
 
 \subsection{Una única solución}
 \label{sec:unica}
 
-\subsection{Soluciones complejas}
-\label{sec:complejas}
-
-
-
-
-<<<<<<< HEAD
-
-\subsection{Ejemplo no.2}
-=======
-Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
-
-Esta ecuación no tiene raices reales $$x^2+1=0$$
-
-\subsection{Ejemplo}
-
-¿De cuantas maneras se puede cubrir un tablero de $2xn$ usando fichas de $1x2,2x1$?
->>>>>>> devel
-
-<<<<<<< HEAD
-=======
-
-
-\subsection{Dos raices iguales}
-Para resolver una ecuación en diferencias de segundo orden la cual tiene dos raices iguales usamos la formula resolvente:
-
+Para resolver una ecuación en diferencias de segundo orden cuya
+ecuación resolvente tenga dos raíces iguales usamos la siguiente fórmula:
 \begin{equation}
  \label{raicesiguales}
- a_n=\lambda_1(x_1)^n +\lambda_2n(x_2)^n
+ a_n=\lambda_1(x_1)^n +\lambda_2n(x_2)^n,
 \end{equation}
+donde $x_1=x_2$ son soluciones de la ecuación de segundo orden y
+$\lambda_1$ y $\lambda_2$ son escalares reales.
 
-donde $x_1=x_2$ son soluciones de la ecuación de segundo orden y $\lambda_1$ y $\lambda_2$ son escalares reales.
-=======
-\subsection{ejemplo 1}
->>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
+\subsubsection{Ejemplo}
+
 En la siguiente ecuación en diferencias
 \begin{equation}
   \label{eq:1}
   x_{n+2}=4x_{n+1}-4x_{n}
 \end{equation}
+veremos que la ecuación resolvente $r^2-4r+4=0$ tiene una sola raíz, a
+saber: $r=2$.
 
-veremos que al resolverla tenemos una ecuación con una sola raiz.
-En $$r^2-4r+4=0$$ (2) las raices son soluciones de (1), usado la formula chicharronera vemos que solo con $r=2$.
+La solución entonces es:
+$$x_n=\lambda_1(2^n)+\lambda_2(n)(2^n)$$
+y ahora se checan los valores iniciales para que nos dé los valores de $\lambda_1$ y $\lambda_2$.
 
-La ecuaci\'on resolvente es:
-<<<<<<< HEAD
-$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
-ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
+\subsubsection{Ejemplo}
 
-=======
+Se plantea la siguiente ecuación en diferencias:
+$a_{n+2}=2a_{n+1}-a_{n}$ con condiciones iniciales: $a_{0}=4, a_{1}=7$.
 
-$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
-ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
-<<<<<<< HEAD
-\end{document}
->>>>>>> master
-=======
-$$x_n=m_1(2^n)+m_2(n)(2^n)$$
-ya solo despues se checan los valores iniciales para que nos de los valores de $$m_1$$ y $$m_2$$.
+Para su solución, primero igualamos la ecuación en diferencias a
+cero: $a_{n+2}-2a_{n+1}+a_{n}=0$.
 
-$$x_n=m_1(2^n)+m_2(n)(2^n)$$
-ya solo despues se checan los valores iniciales para que nos de los valores de $m_1$ y $m_2$.
->>>>>>> devel
+Esto último nos genera una ecuación resolvente que se factoriza y
+resuelve: $r^2-2r+1=0$, ${(r-1)^2=0}$, ${r=1}$.
 
-\subsection{Ejemplo 2}
+La solución general a esta ecuación en diferencias sería:
+$a_{n}=\lambda_{1}(1)^n+n\lambda_{2}(1)^n$.
 
-Se plantea la siguiente ecuacción en diferencias:
-
-$a_{n+2}=2a_{n+1}-a_{n}$ con condiciones iniciales : $a_{0}=4 ; a_{1}=7$
-
-Solución:
-
-Primero igualamos la ecuación en diferencias a cero:
-
-$a_{n+2}-2a_{n+1}+a_{n}=0$ Esto último nos genera una ecuacción resolvente que se factoriza y resuelve facilmente:
-
-$r^2-2r+1=0$
-
-${(r-1)^2=0}$
-
-${r=1}$
-La solución general a esta eccuación en diferencias seria:
-
-$a_{n}=\lambda_{1}(1)^n+n\lambda_{2}(1)^n$
-
-Sin embargo, el problema nos da condiciones iniciales específicas.Entonces procedemos a plantear un sistema de ecuaciones para poder satisfacer las condiciones iniciales.
-
-$a_{0}=4=\lambda_{1}(1)^0+0\lambda_{2}(1)^0$
-
-$a_{1}=7=\lambda_{1}(1)^1+1\lambda_{2}(1)^1$
+Sin embargo, el problema nos da condiciones iniciales
+específicas. Entonces procedemos a plantear un sistema de ecuaciones
+para poder satisfacer las condiciones iniciales.
+\begin{align*}
+  \label{sistema2}
+  a_{0}&=4=\lambda_{1}(1)^0+0\lambda_{2}(1)^0\\
+  a_{1}&=7=\lambda_{1}(1)^1+1\lambda_{2}(1)^1
+\end{align*}
 
 Al resolver lo anterior obtenemos los siguientes valores:
+$\lambda_{1}=4$ y $\lambda_{2}=3$, con lo que la solución final será:
+$a_{n}=4(1)^n+3n(1)^n$.
 
-$\lambda_{1}=4 y \lambda_{2}=3$
 
-Con lo que la solución final sera:
+\subsection{Los números  complejos}
 
-$a_{n}=4(1)^n+3n(1)^n$
+Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ ,
+con $i^2=-1$, $a$ parte real, $b$ parte imaginaria.
 
->>>>>>> 7c6499fcb5ae09a0e23aff14046698dae45acd41
-
-\subsection{Números  complejos}
-
-Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
-Esta ecuaci\'on no tiene raices reales $$x^2+1=0$$
-
-Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ , con $i^2=(-1)$, a parte real, b parte imaginaria.
-
-El módulo de un número complejo: $|a+bi|=\surd(a^2+b^2)$.
-
+El módulo de un número complejo se define como: $|a+bi|=\sqrt{a^2+b^2}$.
 
 El argumento de un número complejo es el ángulo comprendido en(continuará)
 
+\subsection{Soluciones complejas}
+\label{sec:complejas}
 
-\subsection{Ejemplo}
+Algunas ocasiones las ecuaciones de segundo orden no tendrán solución
+en los reales, sin embargo en los complejos sí y no por manejar
+números complejos su nivel de dificultad será mayor. Aquí mostramos un
+ejemplo de soluciones complejas: $x_{n+2}=-4x_{n}$ con $x_0=1$ y
+$x_1=0$
 
-Para cada $n$, considera el determinante $n\times n$ dado por:
-\begin{equation}
-  \label{eq:1}
-  D_n=\det
-  \begin{pmatrix}
-    b & b\\
-    b & b 
-  \end{pmatrix}
-\end{equation} 
-
-\subsection{RAICES COMPLEJAS}
-
-Algunas ocaciones las ecuaciones de segundo orden no tendran solución en los reales, sin embargo en los complejos si y no por manejar numeros complejos su nivel de dificultad sera mayor. Aqui mostramos un ejemplo de soluciones complejas:
-
-$x_{n+2}=-4x_{n}$ con $x_0=1$ y $x_1=0$
-
-Resolvemos igual que en ecuaciones de segundo orden entonces aplicamos la formula general para buscar sus raices y tenemos:
-
-$r=\pm2i$
-
-Ahora buscaremos su módulo:
-
-$|r|=\sqrt{2^2}$
+Resolvemos igual que en ecuaciones de segundo orden entonces aplicamos
+la formula general para buscar sus raíces y tenemos: $r=\pm2i$.
+Ahora buscaremos su módulo: $|r|=\sqrt{2^2}$
 
 Este ejemplo continuará...
-
-\subsection{Ejemplo: Raíces complejas} 
  
-ALgunas veces las ecuaciones no tiene solución en los reales pero si en los complejos, y eso no tiene por qué ser un problema. La siguiente ecuación tiene soluciones complejas:
- 
-$x_{n+2}=4x_{n+1}-8x_n$ con condiciones iniciales $x_0=1$ y $x_1=0$
+Otro ejemplo: $x_{n+2}=4x_{n+1}-8x_n$ con condiciones iniciales
+$x_0=1$ y $x_1=0$. Para encontrar sus raíces se lleva a cabo el
+procedimiento habitual. En este caso sus raíces son: $r=2\pm2i$
 
-Para encontrar sus raíces se lleva a cabo el prodecimiento habitual. En este caso sus raíces son:
-
-$r=2\pm2i$
-
-
-El siguiente paso es encontrar su módulo: 
-
-
-$|r|=\sqrt{2^2+2^2}$
-
+El siguiente paso es encontrar su módulo: $|r|=\sqrt{2^2+2^2}$
 
 Continuará...
+
+\subsubsection{Ejemplo}
+
+Para cada $n$, considera $D_{n}$ el determinante $n\times n$ dado por:
+
+\begin{equation*}
+\begin{pmatrix}
+0 & 1 & 0 & 0 &\ldots & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 &\ldots & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 1 &\ldots & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 &\ldots & 0 & 0 & 0 & 0\\
+\ldots\\
+0 & 0 & 0 & 0 &\ldots & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 &\ldots & 1 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 &\ldots & 0 & 1 & 0 & 1\\
+0 & 0 & 0 & 0 &\ldots & 0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation*}
+
 
 \end{document}
