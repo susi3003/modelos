@@ -1,3 +1,4 @@
+
 \documentclass{article}
 
 % \usepackage[spanish]{babel}
@@ -44,20 +45,6 @@ Estas ecuaciones hacen que una ecuación que inicialmente era de esta manera $x_
 
 $x_n=3^n(4)$0     
 
-
-\subsection{Ecuaciones afines}
-
-Una ecuación afín en diferencias de primer orden tiene la forma $x_{n+1}=ax_n+b$ donde $a$ es una constante. 
-
-\begin{equation}
-  \label{afin}
-  x_n=a^n(x_0-\alpha)+\alpha
-\end{equation}
-
-donde $\alpha=\frac{b}{1-a}$. 
-
-Para deducir esta fórmula usamos que $$\sum_{i=0}^{n-1}a^i=\frac{a^n-1}{a-1}$$.
-
 \subsection{Ejemplito}
 
 Nuestro compañerito Pepe muere en raras circunstancias (después de tener su examen de Álgebra II), luego descubren lo radiante de su ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se vea un poco más feo (como quien digo, dentro de 200 años)?
@@ -75,21 +62,29 @@ Para resolver una ecuación en diferencias de segundo orden se usa la ecuación 
 
 Una ecuación en diferencias de segundo orden , tiene la forma $a_{k+2}=f(a_k ,a_{k+2}$
 
-Esta ecuaci\'on no tiene raices reales $$x^2+1=0$$
+Esta ecuación no tiene raices reales $$x^2+1=0$$
+
+\subsection{Ejemplo}
+
+¿De cuantas maneras se puede cubrir un tablero de $2xn$ usando fichas de $1x2,2x1$?
+
 
 \subsection{ejemplo 1}
 En la siguiente ecuación en diferencias
 \begin{equation}
   \label{eq:1}
-  $x_{n+2}=4x_{n+1}-4x_{n}$
+  x_{n+2}=4x_{n+1}-4x_{n}
 \end{equation}
  veremos que al resolverla tenemos una ecuación con una sola raiz.
 En $$r^2-4r+4=0$$ (2) las raices son soluciones de (1), usado la formula chicharronera vemos que solo con $r=2$.
 
 La ecuaci\'on resolvente es:
-$$x_n=\lamda_1(2^n)+\lamda_2(n)(2^n)$$
-ya solo despues se checan los valores iniciales para que nos de los valores de $$\lamda_1$$ y $$\lamda_2$$.
-\end{document}
+
+$$x_n=m_1(2^n)+m_2(n)(2^n)$$
+ya solo despues se checan los valores iniciales para que nos de los valores de $$m_1$$ y $$m_2$$.
+
+$$x_n=m_1(2^n)+m_2(n)(2^n)$$
+ya solo despues se checan los valores iniciales para que nos de los valores de $m_1$ y $m_2$.
 
 \subsection{Números  complejos}
 
@@ -111,9 +106,23 @@ Para cada $n$, considera el determinante $n\times n$ dado por:
     b & b\\
     b & b 
   \end{pmatrix}
-\end{equation}
+\end{equation} 
 
-Esta ecuación no tiene raices reales $$x^2+1=0$$
+\subsection{RAICES COMPLEJAS}
+
+Algunas ocaciones las ecuaciones de segundo orden no tendran solución en los reales, sin embargo en los complejos si y no por manejar numeros complejos su nivel de dificultad sera mayor. Aqui mostramos un ejemplo de soluciones complejas:
+
+$x_{n+2}=-4x_{n}$ con $x_0=1$ y $x_1=0$
+
+Resolvemos igual que en ecuaciones de segundo orden entonces aplicamos la formula general para buscar sus raices y tenemos:
+
+$r=\pm2i$
+
+Ahora buscaremos su módulo:
+
+$|r|=\sqrt{2^2}$
+
+Este ejemplo continuará...
 
 \subsection{Ejemplo: Raíces complejas} 
  
@@ -133,8 +142,6 @@ $|r|=\sqrt{2^2+2^2}$
 
 
 Continuará...
-
-
 
 \end{document}
 
