@@ -286,12 +286,28 @@ Para cada $n$, considera $D_{n}$ el determinante $n\times n$ dado por:
 \subsection{Ecuaciones de segundo orden no homogéneas}
 \label{sec:nohomogeneas}
 
-%%% Teoría ???????
+Para resolver la ecuación representada por la expresión
+$$a_{n+2}+ba_{n+1}+ca_{n}=f(n)$$ debemos sumar una solución particular
+del problema no homogeneo a la solución obtenida de resolver la parte
+homogenea.
+
+Cuando la solución particular del problema no homogeneo que estamos
+presentando también es solucion de la parte homogenea, se multiplica
+por la menor potencia entera positiva de $n$ hasta eliminar toda
+duplicación.
 
 \subsubsection{El término no homogéneo es exponencial}
 \label{sec:exponencial}
 
-Cuando el t\'ermino no homog\'eneo es exponencial debemos proponer una soluci\'on de dicho sistema. Por ejemplo: la ecuacion en diferencias $x_{n+2}+3x_{n+1}+2x_n=3^n$ al resolver el sistema homog\'eneo obtenemos la solucion: $x-n=\lambda_1(-2)^n+\lambda_2(-1)^n$, ahora, para el sistema no homog\'eneo, debemos proponer una soluci\'on la cual es un m\'ultiplo del termino exponencial, en este ejemplo la soluci\'on del sisstema no homog\'eneo es de la forma $A(3)^n$, ya que tenemos una propuesta, debemos resolver el sistema con $x_n=A(3)^n$, veamos la soluci\'on:
+Cuando el t\'ermino no homog\'eneo es exponencial debemos proponer una
+soluci\'on de dicho sistema. Por ejemplo: la ecuacion en diferencias
+$x_{n+2}+3x_{n+1}+2x_n=3^n$ al resolver el sistema homog\'eneo
+obtenemos la solucion: $x-n=\lambda_1(-2)^n+\lambda_2(-1)^n$, ahora,
+para el sistema no homog\'eneo, debemos proponer una soluci\'on la
+cual es un m\'ultiplo del termino exponencial, en este ejemplo la
+soluci\'on del sisstema no homog\'eneo es de la forma $A(3)^n$, ya que
+tenemos una propuesta, debemos resolver el sistema con $x_n=A(3)^n$,
+veamos la soluci\'on:
 
 \begin{align*}
   \label{solucion 32}
