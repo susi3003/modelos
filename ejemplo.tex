@@ -102,8 +102,28 @@ $X_n=2^n13=a^nX_0$ quedando de esta manera la ecuación resolvente.
 Una ecuación en diferencias de segundo orden tiene la forma $a_{k+2}=f(a_k,a_{k+1})$.
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
 
-Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
-% Mauricio
+Para resolver una ecuación en diferencias de segundo orden se usa la
+ecuación resolvente, la cual se dedujo de la siguiente manera:
+
+En generral una ecuación en diferencias de segundo orden se ve de la
+siguiente manera $x_{k+2}=px_{k+1}+qx_{k}$, ésto implica que
+$x_{k+2}-px_{k+1}-qx_{k}=0$, ahora sean $-p=a$ y $-q=b$. Así:
+\begin{equation}
+  \label{ecsegorden}
+  x_{k+2}+ax_{k+1}+bx_{k}=0
+\end{equation}
+
+con $a$ y $b$ en los reales, entonces cómo ya mencionamos, el método
+para resolver éstas ecuaciones está inspirado en la fórmula
+\ref{lineal}. Ahora, ¿qué deben cumplir $r$ y $c$ para que $x_k=cr^k$
+sea solución de \ref{ecsegorden}?
+
+Tenenemos entonces que: $x_{k+2}=cr^{k+2}$, $x_{k+1}=cr^{k+1}$ y
+$x_{k}=cr^{k}$, luego $cr^{k+2}+acr^{k+1}+bcr^k=0$, ésto implica que
+$c(r^{k+2}+ar^{k+1}+br^k)=0$, se sigue $r^k(r^2+ar+b)=0$, para todo
+$k$, así tenemos que $r^2+ar+b=0$ a la cual lamaremos \textit{ecuación
+  resolvente} de \ref{ecsegorden} y $x^k=r^k$ es solución de
+\ref{ecsegorden}.
 
 
 
