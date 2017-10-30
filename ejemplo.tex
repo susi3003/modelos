@@ -239,7 +239,17 @@ Para cada $n$, considera $D_{n}$ el determinante $n\times n$ dado por:
 \subsubsection{El término no homogéneo es exponencial}
 \label{sec:exponencial}
 
-%%%% ????????
+Cuando el t\'ermino no homog\'eneo es exponencial debemos proponer una soluci\'on de dicho sistema. Por ejemplo: la ecuacion en diferencias $x_{n+2}+3x_{n+1}+2x_n=3^n$ al resolver el sistema homog\'eneo obtenemos la solucion: $x-n=\lambda_1(-2)^n+\lambda_2(-1)^n$, ahora, para el sistema no homog\'eneo, debemos proponer una soluci\'on la cual es un m\'ultiplo del termino exponencial, en este ejemplo la soluci\'on del sisstema no homog\'eneo es de la forma $A(3)^n$, ya que tenemos una propuesta, debemos resolver el sistema con $x_n=A(3)^n$, veamos la soluci\'on:
+
+\begin{align*}
+  \label{solucion 32}
+  A(3)^{n+2}+3A(3)^{n+1}+2A(3)^n&=(3)^n\\
+  A(3)^2+3A(3)+2A&=1\\
+  9A+9A+2A&=1\\
+  20A&=1
+\end{align*}
+De ahí, concluimos que $A=\frac{1}{20}$
+continuara...
 
 \subsubsection{El término no homogéneo es polinomial}
 \label{sec:polinomial}
