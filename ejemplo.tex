@@ -36,11 +36,12 @@ $x_{n+1}=ax_n$ donde $a$ es una constante.
 La fórmula para resolver ecuaciones lineales es:
 \begin{equation}
   \label{lineal}
-  x_n=a^nx_0
+  x_n=a^nx_0.
 \end{equation}
 
 Por ejemplo, si iniciamos una inversión con 1000 pesos con un interés
 mensual del 1\%, obtenemos lo siguiente:
+%% Mejorar el párrafo anterior: ???????
 
 \begin{center}
   \includegraphics[width=8cm]{inversion.png}
@@ -52,13 +53,15 @@ solo dependa de $x_n$ y queda $x_{n+1}=3x_n$, cuya solución con
 condición inicial $x_0=4$ es la siguiente:
 $$x_n=3^n(4).$$
 
-\subsection{Ejemplito}
+\subsection{Ejemplo}
 
 Nuestro compañerito Pepe muere en raras circunstancias (después de
 tener su examen de Álgebra II), luego descubren lo radiante de su
-ser. cada 20 años el elemento radioactivo decae a razón de $2\%$, si
+ser. Cada 20 años el elemento radioactivo decae a razón de $2\%$, si
 inicialmente contenía 2 kilitos de puro amor ¿Cuánto tendrá cuando se
 vea un poco más feo (como quien dice, dentro de 200 años)?
+
+% Solución: ????? 
 
 \subsection{Un ejemplito más}
 
@@ -67,15 +70,20 @@ vea un poco más feo (como quien dice, dentro de 200 años)?
 \section{Ecuaciones de segundo orden}
 
 Una ecuación en diferencias de segundo orden tiene la forma $a_{k+2}=f(a_k,a_{k+1})$.
-
 El método para resolver estas ecuaciones está inspirado en la fórmula \ref{lineal}.
 
 Para resolver una ecuación en diferencias de segundo orden se usa la ecuación resolvente.
-
 % Mauricio
+
+
 
 \subsection{Dos soluciones distintas}
 \label{sec:distintas}
+
+\subsubsection{Teoría}
+\label{sec:teoriadistintas}
+
+%% Explicar: ??????
 
 \subsubsection{Ejemplo}
 
@@ -110,6 +118,9 @@ $F_{n}= \frac{5+\sqrt{5}}{10}\frac{(1+\sqrt{5})^n}{2} +
 ¿De cuantas maneras se puede cubrir un tablero de $2\times n$ usando
 fichas de $1\times 2$, $2\times 1$?
 
+%% Explicar la solución: ???????
+
+
 \subsection{Una única solución}
 \label{sec:unica}
 
@@ -117,7 +128,7 @@ Para resolver una ecuación en diferencias de segundo orden cuya
 ecuación resolvente tenga dos raíces iguales usamos la siguiente fórmula:
 \begin{equation}
  \label{raicesiguales}
- a_n=\lambda_1(x_1)^n +\lambda_2n(x_2)^n,
+ a_n=\lambda_1x_1^n +\lambda_2nx_2^n,
 \end{equation}
 donde $x_1=x_2$ son soluciones de la ecuación de segundo orden y
 $\lambda_1$ y $\lambda_2$ son escalares reales.
@@ -132,9 +143,10 @@ En la siguiente ecuación en diferencias
 veremos que la ecuación resolvente $r^2-4r+4=0$ tiene una sola raíz, a
 saber: $r=2$.
 
-La solución entonces es:
-$$x_n=\lambda_1(2^n)+\lambda_2(n)(2^n)$$
-y ahora se checan los valores iniciales para que nos dé los valores de $\lambda_1$ y $\lambda_2$.
+La solución general es entonces:
+$$x_n=\lambda_12^n+\lambda_2n2^n$$
+y a continuación se deben considerar los valores iniciales para que
+nos dé los valores de $\lambda_1$ y $\lambda_2$.
 
 \subsubsection{Ejemplo}
 
@@ -148,7 +160,7 @@ Esto último nos genera una ecuación resolvente que se factoriza y
 resuelve: $r^2-2r+1=0$, ${(r-1)^2=0}$, ${r=1}$.
 
 La solución general a esta ecuación en diferencias sería:
-$a_{n}=\lambda_{1}(1)^n+n\lambda_{2}(1)^n$.
+$a_{n}=\lambda_{1}1^n+n\lambda_{2}1^n$.
 
 Sin embargo, el problema nos da condiciones iniciales
 específicas. Entonces procedemos a plantear un sistema de ecuaciones
@@ -161,17 +173,20 @@ para poder satisfacer las condiciones iniciales.
 
 Al resolver lo anterior obtenemos los siguientes valores:
 $\lambda_{1}=4$ y $\lambda_{2}=3$, con lo que la solución final será:
-$a_{n}=4(1)^n+3n(1)^n$.
+$a_{n}=4(1)^n+3n(1)^n=4+3n$.
 
 
 \subsection{Los números  complejos}
 
 Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ ,
-con $i^2=-1$, $a$ parte real, $b$ parte imaginaria.
+con $i^2=-1$, y donde $a$ recibe el nombre de parte real y $b$ el de
+parte imaginaria.
 
 El módulo de un número complejo se define como: $|a+bi|=\sqrt{a^2+b^2}$.
 
 El argumento de un número complejo es el ángulo comprendido en(continuará)
+%%% ????
+
 
 \subsection{Soluciones complejas}
 \label{sec:complejas}
@@ -186,7 +201,7 @@ Resolvemos igual que en ecuaciones de segundo orden entonces aplicamos
 la formula general para buscar sus raíces y tenemos: $r=\pm2i$.
 Ahora buscaremos su módulo: $|r|=\sqrt{2^2}$
 
-Este ejemplo continuará...
+%%% ??????????
  
 Otro ejemplo: $x_{n+2}=4x_{n+1}-8x_n$ con condiciones iniciales
 $x_0=1$ y $x_1=0$. Para encontrar sus raíces se lleva a cabo el
@@ -194,7 +209,7 @@ procedimiento habitual. En este caso sus raíces son: $r=2\pm2i$
 
 El siguiente paso es encontrar su módulo: $|r|=\sqrt{2^2+2^2}$
 
-Continuará...
+%%%% ???????????
 
 \subsubsection{Ejemplo}
 
@@ -214,5 +229,21 @@ Para cada $n$, considera $D_{n}$ el determinante $n\times n$ dado por:
 \end{pmatrix}
 \end{equation*}
 
+%%% Solución ?????????
+
+\subsection{Ecuaciones de segundo orden no homogéneas}
+\label{sec:nohomogeneas}
+
+%%% Teoría ???????
+
+\subsubsection{El término no homogéneo es exponencial}
+\label{sec:exponencial}
+
+%%%% ????????
+
+\subsubsection{El término no homogéneo es polinomial}
+\label{sec:polinomial}
+
+%%% ???????????
 
 \end{document}
