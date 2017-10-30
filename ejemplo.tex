@@ -253,10 +253,22 @@ Un complejo es un número de la forma $z=a+bi$, $a,b\in\mathbb{R}$ ,
 con $i^2=-1$, y donde $a$ recibe el nombre de parte real y $b$ el de
 parte imaginaria.
 
-El módulo de un número complejo se define como: $|a+bi|=\sqrt{a^2+b^2}$.
+El módulo de un número complejo se define como:
+$|a+bi|=\sqrt{a^2+b^2}$, agarrando las partes reales, el módulo
+siempre es positivo.
 
-El argumento de un número complejo es el ángulo comprendido en(continuará)
-%%% ????
+El argumento de un número complejo y se denota así:
+$arg(z)=\theta$. Es el ángulo comprendido en el plano tanto en el eje
+real($x\in\mathbb{R}$) como el eje imaginario($y\in\mathbb{R}$).  Para calcularlo decimos que:
+$z=|z|*\frac{z}{|z|}$, ahora que tenemos eso podemos ver a $z$ como
+$z=cos(\theta)+isen(\theta)$. Para obtener el valor de $\theta$
+necesitamos la siguiente fórmula: $\theta=arctan(arg(z))$. Teniendo el
+valor de $\theta$ podemos sustituirla en nuestra ecuación principal
+$z=cos(\theta)+isen(\theta)$. Para tener una solución en términos de
+$n$ tenemos que elevar toda nuestra fórmula a la $n$, es decir
+$z^n=(cos(\theta)+isen(\theta))^n$, esto es igual que decir
+$z^n=cos(\theta*n)+isen(\theta*n)$ (utilizando la fórmula de Moivre).
+%pame
 
 
 \subsection{Soluciones complejas}
