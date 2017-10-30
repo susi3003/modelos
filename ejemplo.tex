@@ -122,7 +122,10 @@ $\lambda_1$ y $\lambda_2$ son escalares reales.
 
 La ecuación de segundo grado más conocida es la \textit{sucesión de
   Fibonacci}, la cual se ve de la forma:
-$$a_{k+2}=a_{k+1}+a_{k},$$
+\begin{equation}
+  \label{eq:fibonacci}
+a_{k+2}=a_{k+1}+a_{k},  
+\end{equation}
 en donde usualmente se toman como condiciones iniciales a: $a_{0}=1$ y $a_{1}=1$
 
 Es inmediato calcular los primeros términos, pero ¿cómo calcularlos
@@ -145,13 +148,29 @@ Para obtener finalmente:
 $F_{n}= \frac{5+\sqrt{5}}{10}\frac{(1+\sqrt{5})^n}{2} +
 \frac{5-\sqrt{5}}{10}\frac{(1-\sqrt{5})^n}{2}$
 
-\subsubsection{Ejemplo}
+\subsubsection{Ejemplo 2.}
 \label{sec:fichas}
 
-¿De cuantas maneras se puede cubrir un tablero de $2\times n$ usando
-fichas de $1\times 2$, $2\times 1$?
+¿De cuántas maneras se puede cubrir un tablero de $2\times n$ usando
+fichas de $1\times 2$ y $2\times 1$?
 
-%% Explicar la solución: ???????
+\textit{Solución:} Sea $a_n$ la cantidad de maneras con las cuales se
+puede cubrir el tablero $2\times n$. Ahora, si tenemos un tablero
+$2\times (n+1)$, observemos que hay una sola manera de cubrir la
+casilla que se le agregó y esta es usando una ficha $2\times 1$.
+Después utilizando el mismo razonamiento con un tablero
+$2\times (n+2)$ tenemos que las dos casillas agregadas se pueden
+cubrir de 2 formas, sin embargo, una es usando fichas $1\times 2$ y la
+otra es usando fichas $2\times 1$, la cual ya se contempló en el caso
+anterior. Por lo tanto solo consideramos el caso restante, obteniendo
+así la siguiente ecuación en diferencias de segundo orden:
+$a_{n+2}=a_{n+1}+a_n$.  Por la ecuación \eqref{eq:fibonacci}, tenemos
+que
+$a_n=\frac{5+\sqrt{5}}{10}\frac{(1+\sqrt{5})^n}{2} +
+\frac{5-\sqrt{5}}{10}\frac{(1-\sqrt{5})^n}{2}$.
+
+
+%% 
 
 
 \subsection{Una única solución}
