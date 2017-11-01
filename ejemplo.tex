@@ -282,14 +282,28 @@ Para cada $n$, considera $D_{n}$ el determinante $n\times n$ dado por:
 
 
 Para encontrar $D_{n}$ usamos la ecuación en diferencias que se deduce de observar
-que $D_{n}=(0)D_{n-1}-(1)D_{n-2}$ quedandonos
+que $D_{n}=(0)D_{n-1}-(1)D_{n-2}$ quedandonos;
 \begin{equation}
   \label{determinante}
 D_{n}=-D_{n-2}
 \end{equation}
  y además $D_{1}=0$ y $D_{2}=-1$.
-Resolvamos la ecuación resolvente de 
-%%% CONTINUARÁ...
+Resolvamos la ecuación resolvente de que es $$r²=-1$$ y asi las soluciones son $y_{n}=i$ y  $z_{n}=-i$.
+
+
+Veamos que  $|i|=\sqrt{1}=1$ y que $arg(\theta)$ y $\theta= \frac{\Pi}{2}$ de ahí
+  $$i=cos(\frac{\Pi}{2})+isen(\frac{\Pi}{2})$$
+  $$i^n=cos(\frac{n\Pi}{2})+isen(\frac{n\Pi}{2})$$
+  $$D_{n}=\lambda_{1}cos(\frac{n\Pi}{2})+\lambda_{2}sen(\frac{n\Pi}{2})$$
+  $$D_{0}=\lambda_{1}(1)+\lambda_{2}(0)=\lambda_{1}=1$$
+  $$D_{0}=\lambda_{1}(0)+\lambda_{2}(1)=\lambda_{2}=0$$
+
+Finalmente la solución es:
+\begin{equation}
+  \label{solucion determinante}
+D_{n}=\cos(\frac{n\Pi}{2}).
+\end{equation}
+
 
 \subsection{Ecuaciones de segundo orden no homogéneas}
 \label{sec:nohomogeneas}
