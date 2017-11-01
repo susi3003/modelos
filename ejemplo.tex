@@ -331,8 +331,28 @@ $a_n=a_{n-1}+n^2$.
 
 De este modo, la relación recursiva queda como sigue: $a_{n}-a_{n-1}=n^2$.
 Como se vio antes, debe resolverse la parte homogénea de la ecuación ($a_n-a_{n-1}=0$), proponer una solución particular para la parte no homogénea y posteriormente sumar ambas soluciones, así, podemos resolver el problema de la siguiente manera:
-(Primero acabo el problema en mi libreta y luego subo la solución)
+Resolviendo la parte homogénea de la solución, la ecuación resultante es: $y_n=\lambda$.
 
+Ahora, usando el método de coeficientes indeterminados, se propone el siguiente polinomio: $z_n=An^3+Bn^2+Cn$, donde sustituyéndola en $a_n-a_{n-1}=0$, so obtienen los valores de $A,B,C$.
+
+
+$An^3+Bn^2+Cn-(A(n-1)^3+B(n-1)^2+C(n-1))=n^2$
+Realizando algunas operaciones se llega a:
+$3An^2+(-3A+2B)n+A-B+C=n^2$
+Como ambos polinomios deben ser iguales, se resuelve el siguiente sistema de ecuaciones:
+$3A=1$,
+$-3A+2B=0$,
+$A-B+C=0$,
+Con lo cual: $A=\frac{1}{3}$, $B=\frac{1}{2}$, $C=\frac{1}{6}$.
+
+Sustituyendo los valores en $Z_n$
+$z_n=\frac{n^3}{3}$$+\frac{n^2}{2}$$+\frac{n}{6}=$$\frac{n(n+1)(2n+1)}{6}$
+
+Para concluir con el problema, se suman ambas soluciones, obteniendo que:
+$a_n=\frac{n(n+1)(2n+1)}{6}$$+\lambda$.
+Con lo cual, evaluando con las condiciones iniciales, se obtiene que $\lambda$$=0$.
+Así, la solución del problema es:
+$a_n=\frac{n(n+1)(2n+1)}{6}$.
 %%% ???????????
 
 \end{document}
