@@ -225,14 +225,14 @@ nos dé los valores de $\lambda_1$ y $\lambda_2$.
 Se plantea la siguiente ecuación en diferencias:
 $a_{n+2}=2a_{n+1}-a_{n}$ con condiciones iniciales: $a_{0}=4, a_{1}=7$.
 
-Para su solución, primero igualamos la ecuación en diferencias a
+Para resolver este problema, primero igualamos la ecuación en diferencias a
 cero: $a_{n+2}-2a_{n+1}+a_{n}=0$.
 
-Esto último nos genera una ecuación resolvente que se factoriza y
-resuelve: $r^2-2r+1=0$, ${(r-1)^2=0}$, ${r=1}$.
+Esto último nos genera una ecuación resolvente. Al factorizarlos y
+resolverlo se obtiene: $r^2-2r+1=0$, ${(r-1)^2=0}$, ${r=1}$.
 
 La solución general a esta ecuación en diferencias sería:
-$a_{n}=\lambda_{1}1^n+n\lambda_{2}1^n$.
+$a_{n}=\lambda_{1}+n\lambda_{2}$.
 
 Sin embargo, el problema nos da condiciones iniciales
 específicas. Entonces procedemos a plantear un sistema de ecuaciones
@@ -244,7 +244,7 @@ para poder satisfacer las condiciones iniciales.
 
 Al resolver lo anterior obtenemos los siguientes valores:
 $\lambda_{1}=4$ y $\lambda_{2}=3$, con lo que la solución final será:
-$a_{n}=4(1)^n+3n(1)^n=4+3n$.
+$a_{n}=4+3n$.
 
 
 \subsection{Los números  complejos}
@@ -281,15 +281,33 @@ $z^n=cos(\theta*n)+isen(\theta*n)$ (utilizando la fórmula de Moivre).
 Algunas ocasiones las ecuaciones de segundo orden no tendrán solución
 en los reales, sin embargo en los complejos sí y no por manejar
 números complejos su nivel de dificultad será mayor. Aquí mostramos un
-ejemplo de soluciones complejas: $x_{n+2}=-4x_{n}$ con $x_0=1$ y
-$x_1=0$
+ejemplo de soluciones complejas: 
 
+$x_{n+2}=-4x_{n}$ con $x_0=1$ y $x_1=0$.
+
+La ecuación resolvente es: $r^2+4=0$, la cual tiene raíces complejas.
 Resolvemos igual que en ecuaciones de segundo orden entonces aplicamos
 la formula general para buscar sus raíces y tenemos: $r=\pm2i$.
-Ahora buscaremos su módulo: $|r|=\sqrt{2^2}$
+Ahora buscaremos su módulo: $|r|=\sqrt{2^2}=2$
 
-%%% ??????????
- 
+Llegado a este punto hacemos uso de la fórmula resolvente y la fórmula de De Moivre para obtener lo siguiente:
+
+$x_n=\lambda_12^n\cos(\frac{n\pi}{2})+\lambda_22^n\sin(\frac{n\pi}{2})$.
+
+Y buscamos el valor de los lambdas con un sistema de ecuaciones:
+
+$\lambda_12^0\cos(\frac{0\pi}{2})+\lambda_22^0\sin(\frac{0\pi}{2})=1$
+
+$\lambda_12^1\cos(\frac{1\pi}{2})+\lambda_22^1\sin(\frac{1\pi}{2})=0$
+
+Al resolver obtenemos los siguientes valores:
+
+$\lambda_1=1;\lambda_2=0$
+
+con lo que la solución final es:
+
+$x_n=2^n\cos(\frac{n\pi}{2})$
+
 Otro ejemplo: $x_{n+2}=4x_{n+1}-8x_n$ con condiciones iniciales
 $x_0=1$ y $x_1=0$. Para encontrar sus raíces se lleva a cabo el
 procedimiento habitual. En este caso sus raíces son: $r=2\pm2i$
