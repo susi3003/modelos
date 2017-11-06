@@ -376,15 +376,15 @@ duplicación.
 \subsubsection{El término no homogéneo es exponencial}
 \label{sec:exponencial}
 
-Cuando el t\'ermino no homog\'eneo es exponencial debemos proponer una
-soluci\'on de dicho sistema. Por ejemplo: la ecuacion en diferencias
-$x_{n+2}+3x_{n+1}+2x_n=3^n$ al resolver el sistema homog\'eneo
+Cuando el término no homogéneo es exponencial debemos proponer una
+solución de dicho sistema. Por ejemplo: la ecuacion en diferencias
+$x_{n+2}+3x_{n+1}+2x_n=3^n$ al resolver el sistema homogéneo
 obtenemos la solucion: $x-n=\lambda_1(-2)^n+\lambda_2(-1)^n$, ahora,
-para el sistema no homog\'eneo, debemos proponer una soluci\'on la
-cual es un m\'ultiplo del termino exponencial, en este ejemplo la
-soluci\'on del sisstema no homog\'eneo es de la forma $A(3)^n$, ya que
+para el sistema no homogéneo, debemos proponer una solución la
+cual es un múltiplo del termino exponencial, en este ejemplo la
+solución del sisstema no homogéneo es de la forma $A(3)^n$, ya que
 tenemos una propuesta, debemos resolver el sistema con $x_n=A(3)^n$,
-veamos la soluci\'on:
+veamos la solución:
 
 \begin{align*}
   A(3)^{n+2}+3A(3)^{n+1}+2A(3)^n&=(3)^n\\
@@ -393,11 +393,11 @@ veamos la soluci\'on:
   20A&=1
 \end{align*}
 De ahí, concluimos que $A=\frac{1}{20}$.
-Luego, nuestra solucion $x_n=\frac{1}{20}(3)^n$ la debemos que sumar a las soluciones del sistema homog\'eneo las cuales quedaran así:
+Luego, nuestra solucion $x_n=\frac{1}{20}(3)^n$ la debemos que sumar a las soluciones del sistema homogéneo las cuales quedaran así:
 $$x_n=\lambda_1(-2)^n+\lambda_2(-1)^n+\frac{1}{20}(3)^n$$.
 Lo unico que nos hace falta es encontrar los valores de $\lambda_1$ y $\lambda_2$ de acuerdo a las condiciones iniciales tal y como se a realizado en ejemplos anteriores.
 
-Tambíen puede pasar que la soluci\'on del sistema homogéneo sea la misma del sistema no homogéneo. Por ejemplo: tomando el ejemplo de arriba pero cambiandolo un poco tenemos la ecuacion en diferencias $x_{n+2}+3x_{n+1}+2x_n=(-2)^n$, vemos que $(-2)^n$ es solucion del sistema homogéneo y del no homogéneo, en este caso, la solucion del sistema no homogéneo se propone así $x_n=An(-2)^n$ (el mismo argumento es para cuando el sistema homogéneo tiene un sola solución y el sistema no homogéneo tiene la misma solución, en ese caso la solucion de sistema no homogéneo se propone como $x_n=An^2(-2)^n$), y al resolver queda así:
+Tambíen puede pasar que la solución del sistema homogéneo sea la misma del sistema no homogéneo. Por ejemplo: tomando el ejemplo de arriba pero cambiandolo un poco tenemos la ecuacion en diferencias $x_{n+2}+3x_{n+1}+2x_n=(-2)^n$, vemos que $(-2)^n$ es solucion del sistema homogéneo y del no homogéneo, en este caso, la solucion del sistema no homogéneo se propone así $x_n=An(-2)^n$ (el mismo argumento es para cuando el sistema homogéneo tiene un sola solución y el sistema no homogéneo tiene la misma solución, en ese caso la solucion de sistema no homogéneo se propone como $x_n=An^2(-2)^n$), y al resolver queda así:
 \begin{align*}
   A(n+2)(-2)^{n+2}+3A(n+1)(-2)^{n+1}+2An(-2)^n&=(-2)^n\\
   A(n+2)(-2)^2+3A(n+1)(-2)+2An&=1\\
