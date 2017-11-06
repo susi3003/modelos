@@ -49,12 +49,15 @@ La fórmula para resolver ecuaciones lineales es:
 \end{equation}
 
 Por ejemplo, si iniciamos una inversión con 1000 pesos con un interés
-mensual del 1\%, obtenemos lo siguiente:
-%% Mejorar el párrafo anterior: ???????
+mensual del 1\%, obtenemos la gráfica mostrada en la figura
+\ref{inversion}.
 
-\begin{center}
+\begin{figure}
+  \centering
   \includegraphics[width=8cm]{inversion.png}
-\end{center}
+  \caption{Gráfica de una inversión}
+  \label{inversion}
+\end{figure}
 
 Estas ecuaciones hacen que una ecuación que inicialmente era de esta
 manera: $x_{n+1}=x_n+2x_n$ puede escribirse de manera que la ecuación
@@ -82,21 +85,23 @@ buscamos el valor del elemento cuando han pasado 60 años,
 equivalentemente a $n=3$, quedando finalmente:
 $$x_{3}=(.98)^3(165)= 155.29.$$
 
-\subsection{Un ejemplito más}
+\subsection{Ejemplo}
 
-Se esparce nuestro trabajo colaborativo dentro de la universidad. Al tiempo 0, el trabajo es conocido por 13 personas. Cada día, por persona que ya lo conoce se le agrega otra (nueva).
+Se esparce nuestro trabajo colaborativo dentro de la universidad. Al
+tiempo 0, el trabajo es conocido por 13 personas. Cada día, por
+persona que ya lo conoce se le agrega otra (nueva).
 
-Si $X_n$ es la cantidad de personas con información nueva al día $n$, determinar $X_n$ en términos de $n$ y $X_0$.
+Si $X_n$ es la cantidad de personas con información nueva al día $n$,
+determinar $X_n$ en términos de $n$ y $X_0$.
 
-Solución:
-
-La ecuación resolvente está dada por $X_{n+1}=aX_n$, entonces, tomando $a=2$ y $X_0=13$, tendríamos el siguiente razonamiento:
-
-$X_0=2^013=13$
-
-$X_1=2^113=26$ siguiendo, llegamos a:
-
-$X_n=2^n13=a^nX_0$ quedando de esta manera la ecuación resolvente.
+\textit{Solución:} La ecuación resolvente está dada por
+$X_{n+1}=aX_n$, entonces, tomando $a=2$ y $X_0=13$, tendríamos el
+siguiente razonamiento:
+\begin{itemize}
+\item $X_0=2^013=13$,
+\item $X_1=2^113=26$, siguiendo, llegamos a:
+\item $X_n=2^n13=a^nX_0$, quedando de esta manera la ecuación resolvente.
+\end{itemize}
 
 \section{Ecuaciones de segundo orden}
 
@@ -106,25 +111,24 @@ El método para resolver estas ecuaciones está inspirado en la fórmula \ref{li
 Para resolver una ecuación en diferencias de segundo orden se usa la
 ecuación resolvente, la cual se dedujo de la siguiente manera:
 
-En generral una ecuación en diferencias de segundo orden se ve de la
+En general una ecuación en diferencias de segundo orden se ve de la
 siguiente manera $x_{k+2}=px_{k+1}+qx_{k}$, ésto implica que
 $x_{k+2}-px_{k+1}-qx_{k}=0$, ahora sean $-p=a$ y $-q=b$. Así:
 \begin{equation}
   \label{ecsegorden}
-  x_{k+2}+ax_{k+1}+bx_{k}=0
+  x_{k+2}+ax_{k+1}+bx_{k}=0,
 \end{equation}
-
 con $a$ y $b$ en los reales, entonces cómo ya mencionamos, el método
 para resolver éstas ecuaciones está inspirado en la fórmula
-\ref{lineal}. Ahora, ¿qué deben cumplir $r$ y $c$ para que $x_k=cr^k$
-sea solución de \ref{ecsegorden}?
+\ref{lineal}. Ahora, ¿qué deben cumplir $r$ y~$c$ para que $x_k=cr^k$
+sea solución de la ecuación \eqref{ecsegorden}?
 
-Tenenemos entonces que: $x_{k+2}=cr^{k+2}$, $x_{k+1}=cr^{k+1}$ y
+Tenemos entonces que: $x_{k+2}=cr^{k+2}$, $x_{k+1}=cr^{k+1}$ y
 $x_{k}=cr^{k}$, luego $cr^{k+2}+acr^{k+1}+bcr^k=0$, ésto implica que
 $c(r^{k+2}+ar^{k+1}+br^k)=0$, se sigue $r^k(r^2+ar+b)=0$, para todo
-$k$, así tenemos que $r^2+ar+b=0$ a la cual lamaremos \textit{ecuación
-  resolvente} de \ref{ecsegorden} y $x^k=r^k$ es solución de
-\ref{ecsegorden}.
+$k$, así tenemos que $r^2+ar+b=0$ a la cual llamaremos
+\textit{ecuación resolvente} de la ecuación \eqref{ecsegorden} y
+$x^k=r^k$ es solución de la ecuación \eqref{ecsegorden}.
 
 
 
@@ -169,7 +173,7 @@ Para obtener finalmente:
 $F_{n}= \frac{5+\sqrt{5}}{10}\frac{(1+\sqrt{5})^n}{2} +
 \frac{5-\sqrt{5}}{10}\frac{(1-\sqrt{5})^n}{2}$
 
-\subsubsection{Ejemplo 2.}
+\subsubsection{Ejemplo}
 \label{sec:fichas}
 
 ¿De cuántas maneras se puede cubrir un tablero de $2\times n$ usando
@@ -258,23 +262,21 @@ El módulo de un número complejo se define como:
 $|a+bi|=\sqrt{a^2+b^2}$, agarrando las partes reales, el módulo
 siempre es positivo.
 
-El argumento de un número complejo y se denota así:
-$arg(z)=\theta$. Es el ángulo comprendido en el plano tanto en el eje
-real($x\in\mathbb{R}$) como el eje imaginario($y\in\mathbb{R}$).
+El argumento de un número complejo se denota así: $\arg(z)=\theta$. Es
+el ángulo comprendido en el plano tanto en el eje real
+($x\in\mathbb{R}$) como el eje imaginario ($y\in\mathbb{R}$).
 
 Para calcularlo decimos que:
 $z=|z|*\frac{z}{|z|}$, ahora que tenemos eso podemos ver a $z$ como
-$z=cos(\theta)+isen(\theta)$.
+$z=\cos(\theta)+i\sin(\theta)$.
 
 Para obtener el valor de $\theta$
-necesitamos la siguiente fórmula: $\theta=arctan(arg(z))$. Teniendo el
+necesitamos la siguiente fórmula: $\theta=\arctan(\arg(z))$. Teniendo el
 valor de $\theta$ podemos sustituirla en nuestra ecuación principal
-$z=cos(\theta)+isen(\theta)$. Para tener una solución en términos de
+$z=\cos(\theta)+i\sin(\theta)$. Para tener una solución en términos de
 $n$ tenemos que elevar toda nuestra fórmula a la $n$, es decir
-$z^n=(cos(\theta)+isen(\theta))^n$, esto es igual que decir
-$z^n=cos(\theta*n)+isen(\theta*n)$ (utilizando la fórmula de Moivre).
-%pame
-
+$z^n=(\cos(\theta)+i\sin(\theta))^n$, esto es igual que decir
+$z^n=\cos(n\theta)+i\sin(n\theta)$ (utilizando la fórmula de Moivre).
 
 \subsection{Soluciones complejas}
 \label{sec:complejas}
@@ -345,18 +347,17 @@ D_{n}=-D_{n-2}
  y además $D_{1}=0$ y $D_{2}=-1$.
 Resolvamos la ecuación resolvente de que es $$r^{2}=-1$$ y asi las soluciones son $y_{n}=i$ y  $z_{n}=-i$.
 
-
-Veamos que  $|i|=\sqrt{1}=1$ y que $arg(\theta)$ y $\theta= \frac{\Pi}{2}$ de ahí
-  $$i=cos(\frac{\Pi}{2})+isen(\frac{\Pi}{2})$$
-  $$i^n=cos(\frac{n\Pi}{2})+isen(\frac{n\Pi}{2})$$
-  $$D_{n}=\lambda_{1}cos(\frac{n\Pi}{2})+\lambda_{2}sen(\frac{n\Pi}{2})$$
+Veamos que  $|i|=\sqrt{1}=1$ y que $\arg(\theta)$ y $\theta= \frac{\pi}{2}$ de ahí
+  $$i=\cos(\frac{\pi}{2})+i\sin(\frac{\pi}{2})$$
+  $$i^n=\cos(\frac{n\pi}{2})+i\sin(\frac{n\pi}{2})$$
+  $$D_{n}=\lambda_{1}\cos(\frac{n\pi}{2})+\lambda_{2}\sin(\frac{n\pi}{2})$$
   $$D_{0}=\lambda_{1}(1)+\lambda_{2}(0)=\lambda_{1}=1$$
   $$D_{0}=\lambda_{1}(0)+\lambda_{2}(1)=\lambda_{2}=0$$
 
 Finalmente la solución es:
 \begin{equation}
   \label{solucion determinante}
-D_{n}=\cos(\frac{n\Pi}{2}).
+D_{n}=\cos(\frac{n\pi}{2}).
 \end{equation}
 
 
@@ -413,22 +414,29 @@ $$x_n=\lambda_1(-2)^n+\lambda_2(-1)^n+\frac{n}{2}(-2)^n$$
 \label{sec:polinomial}
 
 Hay ecuaciones en diferencias que son de la siguiente forma: $a_{n+2}+ba_{n+1}+ca_n=f(n)$, donde $f(n)$ es un polinomio. Por ejemplo, la siguiente suma: $1^2+2^2+...+n^2$, su fórmula puede obtenerse usando una relación de recurrencia, notando que:
-$a_1=1$,
-$a_2=a_1+2^2$,
-...
-$a_n=a_{n-1}+n^2$.
+$a_1=1$, $a_2=a_1+2^2$, \dots, $a_n=a_{n-1}+n^2$.
 
 
-De este modo, la relación recursiva queda como sigue: $a_{n}-a_{n-1}=n^2$.
-Como se vio antes, debe resolverse la parte homogénea de la ecuación ($a_n-a_{n-1}=0$), proponer una solución particular para la parte no homogénea y posteriormente sumar ambas soluciones, así, podemos resolver el problema de la siguiente manera:
-Resolviendo la parte homogénea de la solución, la ecuación resultante es: $y_n=\lambda$.
+De este modo, la relación recursiva queda como sigue:
+$a_{n}-a_{n-1}=n^2$.  Como se vio antes, debe resolverse la parte
+homogénea de la ecuación ($a_n-a_{n-1}=0$), proponer una solución
+particular para la parte no homogénea y posteriormente sumar ambas
+soluciones, así, podemos resolver el problema de la siguiente manera:
+Resolviendo la parte homogénea de la solución, la ecuación resultante
+es: $y_n=\lambda$.
 
-Ahora, usando el método de coeficientes indeterminados, se propone el siguiente polinomio: $z_n=An^3+Bn^2+Cn$, donde sustituyéndola en $a_n-a_{n-1}=0$, so obtienen los valores de $A,B,C$.
+Ahora, usando el método de coeficientes indeterminados, se propone el
+siguiente polinomio: $z_n=An^3+Bn^2+Cn$, donde sustituyéndola en
+$a_n-a_{n-1}=0$, se obtienen los valores de $A,B,C$.
 
+Usaremos la siguiente expresión:
+\begin{equation}
+  \label{polinomial}
+   An^3+Bn^2+Cn-(A(n-1)^3+B(n-1)^2+C(n-1))=n^2.  
+\end{equation}
 
-$An^3+Bn^2+Cn-(A(n-1)^3+B(n-1)^2+C(n-1))=n^2$
 Realizando algunas operaciones se llega a:
-$3An^2+(-3A+2B)n+A-B+C=n^2$
+$3An^2+(-3A+2B)n+A-B+C=n^2$.
 Como ambos polinomios deben ser iguales, se resuelve el siguiente sistema de ecuaciones:
 $3A=1$,
 $-3A+2B=0$,
